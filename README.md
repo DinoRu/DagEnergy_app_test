@@ -1,4 +1,4 @@
-# flutter_app_test
+# DagEnergy App
 
 A new Flutter project.
 
