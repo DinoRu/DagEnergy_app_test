@@ -64,12 +64,13 @@ class _LoginScreenState extends State<LoginScreen> {
                       decoration: InputDecoration( 
                         label: Text('Username/Email', style: TextStyle(color: Colors.white),),
                         suffixIcon: Icon(Icons.mail, color: Colors.white,),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20),
+                        border: UnderlineInputBorder(
                           borderSide: BorderSide(color: Colors.white)
                         ),
-                        focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20),
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Colors.white)
+                        ),
+                        enabledBorder: UnderlineInputBorder(
                           borderSide: BorderSide(color: Colors.white)
                         ),
                         fillColor: Colors.white
@@ -82,16 +83,16 @@ class _LoginScreenState extends State<LoginScreen> {
                       obscuringCharacter: "*",
                       decoration: InputDecoration( 
                         label: Text('Password', style: TextStyle(color: Colors.white),),
-                        suffixIcon: Icon(Icons.lock_person, color: Colors.white,),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20),
+                        suffixIcon: Icon(Icons.visibility_off, color: Colors.white,),
+                        border: UnderlineInputBorder(
                           borderSide: BorderSide(color: Colors.white)
                         ),
-                        focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20),
+                        focusedBorder: UnderlineInputBorder(
                           borderSide: BorderSide(color: Colors.white)
                         ),
-                        
+                        enabledBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Colors.white)
+                        )
                       ),
                     ),
                     SizedBox(
@@ -108,7 +109,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       width: double.infinity,
                       child: RawMaterialButton(
                         elevation: 0.0,
-                        fillColor: Colors.blue,
+                        fillColor: Colors.black54,
                         padding: EdgeInsets.symmetric(vertical: 12.0),
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0)),
                       onPressed: () async {
@@ -119,7 +120,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => ProfileScreen()));
                         }
                       },
-                      child: Text("Login", style: TextStyle(color: Colors.white),)),
+                      child: Text("Login", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),)),
                     )
                   ],
                 ),
